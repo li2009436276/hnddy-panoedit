@@ -16,6 +16,6 @@ class FileUpload
     {
         $this->fileCategory = $fileCategory;
         $this->uploadFile   = $uploadFile;
-        $this->disk         = $disk ? $disk : env('OSS_UPLOAD_DISK','oss_upload');
+        $this->disk         = $disk ? $disk : env('STORAGE_DISK','public');
     }
 }

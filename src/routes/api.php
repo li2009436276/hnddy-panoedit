@@ -5,7 +5,6 @@ Route::group([
     'prefix' => config('pano_edit.api_prefix')
 ], function () {
 
-
     Route::middleware('id.decode')->group(function () {
         Route::middleware(config('pano_edit.ticket'))->group(function () {
 

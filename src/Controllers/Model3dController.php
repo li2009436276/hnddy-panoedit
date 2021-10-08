@@ -56,7 +56,7 @@ class Model3dController extends Controller
      *     ),
      *
      *     security={
-     *         {"token": {}}
+     *         {"ticket": {}}
      *     }
      * )
      */
@@ -93,7 +93,7 @@ class Model3dController extends Controller
      *     ),
      *
      *     security={
-     *         {"token": {}}
+     *         {"ticket": {}}
      *     }
      * )
      */
@@ -140,7 +140,7 @@ class Model3dController extends Controller
      *     ),
      *
      *     security={
-     *         {"token": {}}
+     *         {"ticket": {}}
      *     }
      * )
      */
@@ -180,7 +180,7 @@ class Model3dController extends Controller
      *     ),
      *
      *     security={
-     *         {"token": {}}
+     *         {"ticket": {}}
      *     }
      * )
      */
@@ -222,7 +222,7 @@ class Model3dController extends Controller
      *     ),
      *
      *     security={
-     *         {"token": {}}
+     *         {"ticket": {}}
      *     }
      * )
      */
@@ -260,7 +260,7 @@ class Model3dController extends Controller
      *     ),
      *
      *     security={
-     *         {"token": {}}
+     *         {"ticket": {}}
      *     }
      * )
      */
@@ -301,7 +301,7 @@ class Model3dController extends Controller
      *     ),
      *
      *     security={
-     *         {"token": {}}
+     *         {"ticket": {}}
      *     }
      * )
      */

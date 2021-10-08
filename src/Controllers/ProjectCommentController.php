@@ -46,7 +46,7 @@ class ProjectCommentController extends Controller
      *     ),
      *
      *     security={
-     *         {"token": {}}
+     *         {"ticket": {}}
      *     }
      * )
      */
@@ -95,7 +95,7 @@ class ProjectCommentController extends Controller
      *     ),
      *
      *     security={
-     *         {"token": {}}
+     *         {"ticket": {}}
      *     }
      * )
      */
@@ -136,7 +136,7 @@ class ProjectCommentController extends Controller
      *     ),
      *
      *     security={
-     *         {"token": {}}
+     *         {"ticket": {}}
      *     }
      * )
      */
@@ -175,7 +175,7 @@ class ProjectCommentController extends Controller
      *     ),
      *
      *     security={
-     *         {"token": {}}
+     *         {"ticket": {}}
      *     }
      * )
      */

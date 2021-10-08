@@ -46,7 +46,7 @@ class RingsController extends Controller
      *     ),
      *
      *     security={
-     *         {"token": {}}
+     *         {"ticket": {}}
      *     }
      * )
      * @param RingsListsRequest $ringsListsRequest
@@ -107,7 +107,7 @@ class RingsController extends Controller
      *     ),
      *
      *     security={
-     *         {"token": {}}
+     *         {"ticket": {}}
      *     }
      * )
      * @param RingsDisableRequest $disableRequest

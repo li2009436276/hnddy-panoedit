@@ -37,7 +37,7 @@ class FileUploadController extends Controller
      *     ),
      *
      *     security={
-     *         {"token": {}}
+     *         {"ticket": {}}
      *     }
      * )
      */

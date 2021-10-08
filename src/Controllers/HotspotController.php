@@ -34,7 +34,7 @@ class HotspotController extends Controller
      *     ),
      *
      *     security={
-     *         {"token": {}}
+     *         {"ticket": {}}
      *     }
      * )
      */
