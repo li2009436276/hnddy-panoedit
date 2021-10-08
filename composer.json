@@ -9,5 +9,20 @@
             "email": "571816409@qq.com"
         }
     ],
-    "require": {}
+    "require": {
+        "yjtec/laravel-makerepo": "1.0.6",
+        "yjtec/emoji": "^1.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "files": ["src/Helper/functions.php"],
+        "psr-4": {
+            "Yjtec\\PanoEdit\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["Yjtec\\PanoEdit\\Providers\\PanoEditServiceProvider", "Yjtec\\PanoEdit\\Providers\\RouteServiceProvider"]
+        }
+    }
 }
