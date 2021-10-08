@@ -1,11 +1,7 @@
 {
-    "name": "yjtec/hnddy-panoedit",
-    "description": "全景编辑",
-    "type": "library",
-    "require": {
-        "yjtec/laravel-makerepo": "1.0.6",
-        "yjtec/emoji": "^1.0"
-    },
+    "name": "www/hnddy-panoedit",
+    "description": "河南地调院",
+    "type": "project",
     "license": "MIT",
     "authors": [
         {
@@ -13,17 +9,5 @@
             "email": "571816409@qq.com"
         }
     ],
-    "minimum-stability": "dev",
-    "autoload": {
-        "files": ["src/Helper/functions.php"],
-        "psr-4": {
-            "Yjtec\\PanoEdit\\": "src/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": ["Yjtec\\PanoEdit\\Providers\\PanoEditServiceProvider", "Yjtec\\PanoEdit\\Providers\\RouteServiceProvider"]
-        }
-    }
+    "require": {}
 }
-
