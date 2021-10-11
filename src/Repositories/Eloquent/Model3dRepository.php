@@ -21,7 +21,7 @@ class Model3dRepository extends Repository implements Model3dInterface
     public function lists($param, $orderSort = ['created_at' => 'desc'])
     {
 
-        $where['user_id'] = $param['user_id'];
+        //$where['user_id'] = $param['user_id'];
         $where['status'] = 1;
 
 
