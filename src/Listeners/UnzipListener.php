@@ -95,7 +95,7 @@
 		      	
 		      		
 		      		//上传文件
-		      		\Storage::disk(config('env.oss_upload'))->put(config('env.app_env').$event->path.'3d/'.$filename,\Storage::disk('public')->get($value));
+		      		//\Storage::disk(config('env.oss_upload'))->put(config('env.app_env').$event->path.'3d/'.$filename,\Storage::disk('public')->get($value));
 
 		      	}
 
@@ -109,8 +109,8 @@
 		        //解压成功上传oss
 				//exec(config('env.ossutil_path').' cp -r '.$sourcePath.' oss://'.config('env.OSS_BUCKET').'/'.config('env.app_env').$event->path.'3d');
 				//exec(config('env.ossutil_path').' cp '.$path.' oss://'.config('env.OSS_BUCKET').'/'.config('env.app_env').$event->path.'3d/model3d.zip'); //上传压缩包
-		        \Storage::disk('public')->delete(config('env.app_env').$event->path);
-		        \Storage::disk('public')->deleteDirectory(config('env.app_env').$event->path.'3d');
+		        //\Storage::disk('public')->delete(config('env.app_env').$event->path);
+		        //\Storage::disk('public')->deleteDirectory(config('env.app_env').$event->path.'3d');
 		        
 	        }catch(\Expection $e){
 
