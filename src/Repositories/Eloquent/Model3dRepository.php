@@ -28,8 +28,6 @@ class Model3dRepository extends Repository implements Model3dInterface
         if(!empty($param['classify_id'])){
 
             $where['classify_id'] = $param['classify_id'];
-        }else{
-            $where['classify_id'] = 0;
         }
 
         $param['page_size'] = !empty($param['page_size']) ? $param['page_size'] : 10;
