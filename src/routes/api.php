@@ -6,7 +6,9 @@ Route::group([
 ], function () {
 
     Route::middleware('id.decode')->group(function () {
-        Route::middleware(config('pano_edit.ticket'))->group(function () {
+
+
+        Route::middleware(config('pano_edit.admin'))->group(function () {
 
             //关于多边形的
             Route::get('/hotspotPolygons/add', 'HotspotPolygonsController@add')->name('hotspotPolynonsAdd');                                        //添加多边形热点
@@ -17,7 +19,7 @@ Route::group([
             Route::get('/model3d/classifyLists', 'Model3dController@classifyLists');                         //分类列表
             Route::post('/model3d/editClassify', 'Model3dController@editClassify');                          //分类编辑
             Route::get('/model3d/delClassify', 'Model3dController@delClassify');                             //删除分类
-            Route::get('/model3d/lists', 'Model3dController@lists');                                         //模型列表
+                                                 //模型列表
             Route::post('/model3d/moveClassify', 'Model3dController@moveClassify');                          //移动分组
             Route::put('/model3d/update', 'Model3dController@update');                                       //更新3d模型
             Route::delete('/model3d/delete', 'Model3dController@delete');                                    //模型删除
@@ -42,6 +44,8 @@ Route::group([
             Route::get('/project/getUserProjectCommentList', 'ProjectCommentController@getUserProjectCommentList');    //通过用户ID获取评论
 
         });
+
+        Route::get('/model3d/lists', 'Model3dController@lists');
 
         //获取文章热点
         Route::get('/hotspot/hotspotArticle/{id}', 'HotspotController@hotspotArticle');
