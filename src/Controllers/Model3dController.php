@@ -266,12 +266,14 @@ class Model3dController extends Controller
      */
     public function lists(Model3dListsRequest $model3dListsRequest)
     {
+
+        $orderSort['sort'] = 'desc';
         if($model3dListsRequest->input('date_sort', 'create') == 'update'){
             $orderSort['updated_at'] = 'desc';
         }else{
             $orderSort['created_at'] = 'desc';
         }
-        $res = $this->model3dInterface->lists($model3dListsRequest->all());
+        $res = $this->model3dInterface->lists($model3dListsRequest->all(),$orderSort);
 
         if($res){
 
