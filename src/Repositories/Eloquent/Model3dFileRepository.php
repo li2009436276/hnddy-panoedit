@@ -21,5 +21,10 @@ class Model3dFileRepository extends Repository implements Model3dFileInterface
     public function insert($data){
     	return $this->model->insert($data);
     }
+
+    public function delete($where)
+    {
+        return $this->model->where($where)->delete();
+    }
 }
 ?>

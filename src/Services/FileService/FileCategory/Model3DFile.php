@@ -10,10 +10,11 @@
 	 */
 	class Model3DFile extends FileParent
 	{
-		
-		public function __construct($dir)
+		private $id = 0;
+		public function __construct($dir,$id = 0)
 		{
 			parent::__construct($dir);
+			$this->id = $id;
 		}
 
 		/**
@@ -61,15 +62,23 @@
 
 	    	foreach ($files as $key => &$value) {
 
-	    		$data['user_id'] = $userId;
-	    		$data['path']	 = $value['path'].'3d';
-	    		$data['name']	 = $value['name'];
-	    		$data['classify_id'] = $classifyId;
-	    		$res = $model3Interface->add($data);
+	    	    if (empty($this->id)) {
 
-	    		if ($res) {
+                    $data['user_id'] = $userId;
+                    $data['path']	 = $value['path'].'3d';
+                    $data['name']	 = $value['name'];
+                    $data['classify_id'] = $classifyId;
+                    $res = $model3Interface->add($data);
 
-	    			$value['id'] = $res->id;
+                    if ($res) {
+
+                        $this->id = $res->id;
+                    }
+                }
+
+	    		if ($this->id) {
+
+	    			$value['id'] = $this->id;
 
 	    			event(new UnzipEvent($userId,$res->id,$value['path']));
 	    		}

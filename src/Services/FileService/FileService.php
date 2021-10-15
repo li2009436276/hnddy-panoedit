@@ -16,7 +16,7 @@ class FileService extends PublicService
      * @param $rootDir
      * @return array
      */
-    public function upload($file,$rootDir,$applyType)
+    public function upload($file,$rootDir,$applyType,$id = 0)
     {
 
         //获取图片应用类型
@@ -36,7 +36,7 @@ class FileService extends PublicService
 
             case 3: {   //3d环物/倾斜摄影
 
-                $model3d = new Model3DFile($rootDir);
+                $model3d = new Model3DFile($rootDir,$id);
                 return $model3d->upload($file);
             }
         }

@@ -44,7 +44,7 @@ class FileUploadController extends Controller
     public function uploadFile(UploadFileRequest $request){
 
         $fileService = new FileService();
-        $res = $fileService->upload($request->file('file'),$request->bucket,$request->apply_type);
+        $res = $fileService->upload($request->file('file'),$request->bucket,$request->apply_type,$request->id);
 
         if ($res) {
 

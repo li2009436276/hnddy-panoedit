@@ -9,6 +9,8 @@ interface Model3dFileInterface
 	*	
 	*/
 	public function insert($data);
+
+	public function delete($where);
 	
 }
 ?>
