@@ -80,7 +80,7 @@
 
 	    			$value['id'] = $this->id;
 
-	    			event(new UnzipEvent($userId,$res->id,$value['path']));
+	    			event(new UnzipEvent($userId,$this->id,$value['path']));
 	    		}
 	    	}
 
